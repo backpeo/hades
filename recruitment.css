@@ -1,0 +1,254 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.header {
+  height: 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 40px;
+}
+
+#nav {
+  display: flex;
+  padding-top: 20px;
+  padding-right: 17px;
+}
+
+#nav li :hover {
+  background-image: url(https://file.hstatic.net/1000306633/file/269858510_400978881784237_2773069039765727977_n_1dec697e894b44028881c14c6507f7d8.png);
+  background-size: 35px 10px;
+  background-repeat: no-repeat;
+  color: #000;
+}
+#nav li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.685);
+  font-size: 0.6875em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#account_link {
+  display: flex;
+}
+#account_link a {
+  text-decoration: none;
+  font-size: 0.6875em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+#tools :hover {
+  color: #000;
+}
+#tools {
+  display: flex;
+  align-items: center;
+}
+#tools a {
+  color: rgba(0, 0, 0, 0.685);
+  text-decoration: none;
+  font-size: 0.6875em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav li a > #account_link li {
+  display: inline-block;
+}
+
+#pic {
+  display: flex;
+}
+
+#pic img {
+  height: 55px;
+  padding-right: 17px;
+}
+
+#tools .subnav {
+  background-color: #000;
+}
+
+.subnav li a :active {
+  background-color: #000;
+}
+
+#language {
+  background-color: #000;
+  color: #ccc;
+}
+.slider {
+  margin-top: 76px;
+  margin: 85%;
+}
+.content {
+  width: 100%;
+  height: auto;
+}
+.content .word {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 100px 0px 50px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.content-img {
+  display: flex;
+}
+.img-a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.img-info {
+  margin: 20px 28px;
+}
+.img-info img {
+  width: 100%;
+  transition: transform 0.7s ease;
+  position: relative;
+  overflow: hidden;
+}
+.img-info img:hover {
+  transform: scale(1.1);
+}
+.img-text {
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+}
+.hidden {
+  overflow: hidden;
+}
+.front,
+.under {
+  display: block;
+  color: #000;
+}
+.front {
+  font-weight: bold;
+}
+.under {
+  font-size: 13px;
+}
+@keyframes runningAnimation {
+  from {
+    transform: translateX(90%);
+  }
+  to {
+    transform: translateX(-90%);
+  }
+}
+.running-text {
+  animation: runningAnimation 15s linear infinite;
+  margin: 0 250px;
+  display: flex;
+  white-space: nowrap;
+  padding: 30px 15px 0 0;
+}
+.slogan .running-text {
+  font-size: 75px;
+  font-style: italic;
+  color: #fff;
+  text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black;
+}
+.slogan {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin: 50px;
+}
+
+.tieu_de {
+  font-size: 1rem;
+  width: 22%;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-weight: bold;
+  display: block;
+}
+.rolln {
+  margin-top: 30px;
+}
+.tieu_de p {
+  width: 100%;
+  font-size: 0.99rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-weight: normal;
+  margin-bottom: 2px;
+}
+
+.tieu_de a {
+  text-decoration: none;
+  color: #000;
+  margin-top: 50px;
+  margin-bottom: 2px;
+}
+
+.messenge-text {
+  color: aqua;
+  line-height: 1.25;
+  font-size: 15px;
+  margin-bottom: 0;
+  display: flex;
+  height: 40px;
+  background-color: #000;
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+.running-mess {
+  animation: runningAnimation 5s linear infinite;
+  margin: 0 250px;
+  display: flex;
+  white-space: nowrap;
+}
+.messenge-text span {
+  color: #fff;
+  font-size: 10px;
+}
+.social {
+  display: flex;
+}
+.fb i {
+  display: inline-block;
+  font-size: 35px;
+  margin-right: 5px;
+}
+.tieu_de .tt img {
+  width: 190px;
+  margin: 0;
+}
+span {
+  padding-left: 5px;
+  padding-top: 5px;
+}

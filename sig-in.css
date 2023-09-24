@@ -1,0 +1,155 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+ul li {
+  list-style: none;
+}
+
+.header {
+  height: 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 40px;
+}
+
+#nav {
+  display: flex;
+  padding-top: 20px;
+  padding-right: 17px;
+}
+
+#nav li :hover {
+  background-image: url(https://file.hstatic.net/1000306633/file/269858510_400978881784237_2773069039765727977_n_1dec697e894b44028881c14c6507f7d8.png);
+  background-size: 35px 10px;
+  background-repeat: no-repeat;
+  color: #000;
+}
+#nav li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.685);
+  font-size: 0.6875em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#account_link {
+  display: flex;
+}
+#account_link a {
+  text-decoration: none;
+  font-size: 0.6875em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+#tools :hover {
+  color: #000;
+}
+#tools {
+  display: flex;
+  align-items: center;
+}
+#tools a {
+  color: rgba(0, 0, 0, 0.685);
+  text-decoration: none;
+  font-size: 0.6875em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav li a > #account_link li {
+  display: inline-block;
+}
+
+#pic {
+  display: flex;
+}
+
+#pic img {
+  height: 55px;
+  padding-right: 17px;
+}
+
+#tools .subnav {
+  background-color: #000;
+}
+
+.subnav li a :active {
+  background-color: #000;
+}
+
+#language {
+  background-color: #000;
+  color: #ccc;
+}
+.content {
+  padding-top: 66px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.all {
+  padding-top: 90px;
+}
+.box {
+  font-size: 30px;
+}
+.box span {
+  font-size: 15px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  width: 550px;
+  height: 50px;
+  background-color: #ededed;
+  padding-bottom: 15px;
+  justify-content: center;
+  display: flex;
+  border: none;
+  padding: 3px;
+  font-size: 15px;
+}
+input[type='date'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+button {
+  font-size: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  margin-right: 15px;
+}
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.return {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  padding-top: 15px;
+}
+.return i {
+  font-size: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+}
+.log-in p span {
+  color: red;
+}
