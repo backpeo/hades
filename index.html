@@ -29,7 +29,6 @@
             <li><a href="">Footwear</a></li>
             <li><a href="">Hat</a></li>
             <li><a href="">Bags</a></li>
-            <li><a href="">Sale</a></li>
             <li><a href="./recruitment.html">Recruitment</a></li>
           </ul>
         </ul>
@@ -104,6 +103,8 @@
           </div>
         </div>
         <div class="slogan">
+          <p class="running-text">STREETWEAR BRAND LIMITED</p>
+          <p class="running-text">STREETWEAR BRAND LIMITED</p>
           <p class="running-text">STREETWEAR BRAND LIMITED</p>
           <p class="running-text">STREETWEAR BRAND LIMITED</p>
         </div>
@@ -186,7 +187,7 @@
           <div id="icon"><i class="fa-solid fa-xmark"></i></i></div>
           <span>Tìm Kiếm</span>
           <div class="looking">
-            <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+            <input class="search-input" id="search-input" type="text" placeholder="Tìm kiếm sản phẩm..." />
           </div>
         </div>
       </div>
@@ -199,7 +200,7 @@
              </div>
           <div class="total">
             <span >Total</span>
-            <span class="cost">100000d</span>
+            <span id="price_product" class="cost">0</span>
           </div>
           <div class="btn-cart">
             
@@ -218,4 +219,14 @@
     </div>
   </body>
   <script src="./scrip.js"></script>
-</html>
+  <script src="./lib/code.jquery.com_jquery-3.7.1.min.js" ></script>
+  <script src="./lib/cdn.jsdelivr.net_npm_slick-carousel@1.8.1_slick_slick.min.js" ></script>
+  <script src="./lib/cdn.jsdelivr.net_npm_slick-carousel@1.8.1_slick_slick.css" ></script>
+  <script>
+    
+  $('.slider').slick({
+    autoplay: true,
+  });
+
+  </script>
+  </html>

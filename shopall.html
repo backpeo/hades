@@ -4,53 +4,105 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./code/tools/fontawesome-free-6.4.2-web/css/all.min.css" />
-
-    <title>Document</title>
     <link rel="stylesheet" href="./shopall.css" />
+    <title>Document</title>
   </head>
   <body>
-    <div class="header">
-      
-      <ul id="pic">
-        <li>
-          <a href="./index.html"
-            ><img
-              src="https://theme.hstatic.net/1000306633/1000891824/14/logo_menu_no_scroll.png?v=574"
-              alt=""
-          /></a>
-        </li>
-        <ul id="nav">
-          <li><a href="./index.html">Ss23 Collection</a></li>
-          <li><a href="./shopall.html">Shop All</a></li>
-          <li><a href="./top.html">Tops</a></li>
-          <li><a href="">Bottom</a></li>
-          <li><a href="">Outwear</a></li>
-          <li><a href="">Footwear</a></li>
-          <li><a href="">Hat</a></li>
-          <li><a href="">Bags</a></li>
-          <li><a href="">Sale</a></li>
-          <li><a href="./recruitment.html">Recruitment</a></li>
-        </ul>
-      </ul>
-      <ul id="tools">
-        <ul id="account_link">
+    <div id="main">
+      <div id="header">
+        <ul id="pic">
           <li>
-            <a href="./log-in.html"><p id="log_in">Đăng Nhập/</p></a>
+            <a href="./index.html"
+              ><img
+                src="https://theme.hstatic.net/1000306633/1000891824/14/logo_menu_no_scroll.png?v=574"
+                alt=""
+            /></a>
           </li>
-          <li>
-            <a href=""><p id="sig_in">Đăng Ký</p></a>
-          </li>
+
+          <ul id="nav">
+            <li><a href="./index.html">Ss23 Collection</a></li>
+            <li><a href="./shopall.html">Shop All</a></li>
+            <li><a href="">Tops</a></li>
+            <li><a href="">Bottom</a></li>
+            <li><a href="">Outwear</a></li>
+            <li><a href="">Footwear</a></li>
+            <li><a href="">Hat</a></li>
+            <li><a href="">Bags</a></li>
+            <li><a href="">Sale</a></li>
+            <li><a href="./recruitment.html">Recruitment</a></li>
+          </ul>
         </ul>
-        <li><a href="">Tìm Kiếm</a></li>
-        <li><a href="">Giỏ Hàng</a></li>
-        <select name="" id="language">
-          <option value="">VN</option>
+        <ul id="tools">
+          <ul id="account_link">
+            <li>
+              <a href="./log-in.html"><p id="log_in">Đăng Nhập/</p></a>
+            </li>
+            <li>
+              <a href="./sig-in.html"><p id="sig_in">Đăng Ký</p></a>
+            </li>
+          </ul>
+
+          <li><button class="search1">Tìm Kiếm</button></li>
+
+          <li><button class="shop">Giỏ hàng</button></li>
+
+          <select name="" id="language">
+            <option value="">VN</option>
+            <option value="">EN</option>
+          </select>
+        </ul>
+
+      </div>
+    </div>
+<div class="contain">
+      <div class="body">
+        <select name="" id="lg">
           <option value="">EN</option>
+          <option value="">VN</option>
         </select>
-      </ul>
+        <div class="font">
+          <div id="icon"><i class="fa-solid fa-xmark"></i></i></div>
+          <span>Tìm Kiếm</span>
+          <div class="looking">
+            <input class="searchInput" type="text" placeholder="Tìm kiếm sản phẩm..." />
+          </div>
+
+          
+          <div id="product-looking">
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="shopping-cart">
+      <div class="cart">
+        <div onClick={handleClick()} id="icon"><i class="fa-solid fa-xmark"></i></i></div>
+          <span class="shopping">Giỏ hàng</span>
+          <div id="san-pham">
+             </div>
+          <div class="total">
+            <span >Total</span>
+            <span id="price_product" class="cost">0</span>
+          </div>
+          <div class="btn-cart">
+            
+
+              <button class="xem">
+                  Xem giỏ hàng
+              </button>
+           
+            <button  class="tinh-tien">Thanh toán</button>
+          </div>
+          
+      </div>
+    </div>
+    <div class="bgf">
+      
     </div>
 
-    <div class="slider">
+     <div class="slider">
       <select name="" id="category">
         <option value="">Mới nhất</option>
         <option value="">Cũ Nhất</option>
@@ -59,126 +111,12 @@
         <option value="">Bán chạy nhất</option>
       </select>
     </div>
-    <div class="content">
-      <!-- Product -->
 
-      <div class="product">
-        <div class="product-cover">
-          <img
-            src="https://product.hstatic.net/1000306633/product/dsc05233_f4651fc12ce24ac28d00ff705d483daf_grande.jpg"
-            alt=""
-            class="product-img-front"
-          />
-          <div class="product-fit">
-            <div class="fit-obj">
-              <a href="">
-                <img
-                  src="https://product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg"
-                  alt=" "
-                  class="product-img-back"
-              /></a>
+    <!-- body
+     -->
+    
+    <div id="content" class="content"></div>
 
-              <div class="button">
-                <button class="left">MUA NGAY</button>
-                <button class="right">THÊM VÀO GIỎ</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-info">
-          <a href=""> OCEAN MEDITATION BOXY TEE </a>
-          <p>420,000₫</p>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-cover">
-          <img
-            src="https://product.hstatic.net/1000306633/product/dsc05233_f4651fc12ce24ac28d00ff705d483daf_grande.jpg"
-            alt=""
-            class="product-img-front"
-          />
-          <div class="product-fit">
-            <div class="fit-obj">
-              <a href="">
-                <img
-                  src="https://product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg"
-                  alt=" "
-                  class="product-img-back"
-              /></a>
-
-              <div class="button">
-                <button class="left">MUA NGAY</button>
-                <button class="right">THÊM VÀO GIỎ</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-info">
-          <a href=""> OCEAN MEDITATION BOXY TEE </a>
-          <p>420,000₫</p>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product-cover">
-          <img
-            src="https://product.hstatic.net/1000306633/product/dsc05233_f4651fc12ce24ac28d00ff705d483daf_grande.jpg"
-            alt=""
-            class="product-img-front"
-          />
-          <div class="product-fit">
-            <div class="fit-obj">
-              <a href="">
-                <img
-                  src="https://product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg"
-                  alt=" "
-                  class="product-img-back"
-              /></a>
-
-              <div class="button">
-                <button class="left">MUA NGAY</button>
-                <button class="right">THÊM VÀO GIỎ</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-info">
-          <a href=""> OCEAN MEDITATION BOXY TEE </a>
-          <p>420,000₫</p>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="product-cover">
-          <img
-            src="https://product.hstatic.net/1000306633/product/dsc05233_f4651fc12ce24ac28d00ff705d483daf_grande.jpg"
-            alt=""
-            class="product-img-front"
-          />
-          <div class="product-fit">
-            <div class="fit-obj">
-              <a href="">
-                <img
-                  src="https://product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg"
-                  alt=" "
-                  class="product-img-back"
-              /></a>
-
-              <div class="button">
-                <button class="left">MUA NGAY</button>
-                <button class="right">THÊM VÀO GIỎ</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-info">
-          <a href=""> OCEAN MEDITATION BOXY TEE </a>
-          <p>420,000₫</p>
-        </div>
-      </div>
-    </div>
      <div class="slogan">
                 <p class="running-text">STREETWEAR BRAND LIMITED</p>
                 <p class="running-text">STREETWEAR BRAND LIMITED</p>
@@ -240,4 +178,5 @@
         </div>
     </div>
   </body>
+  <script src="./scrip.js"></script>
 </html>

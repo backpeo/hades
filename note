@@ -1,0 +1,111 @@
+const RenderAllProduct = () => { var allProductHTML = ''; productOnSale.map((element) => { const
+allProduct = `
+<div class="info-prd">
+  <div class="info-prodct">
+    <ul>
+      <li>đây là sản phẩm thuộc về hades</li>
+
+      <li>sản phẩm được làm bằng cotton 100%</li>
+
+      <li>siêu mát siêu thấm hút mồ hôi</li>
+    </ul>
+  </div>
+
+  <div class="image">
+    <img src="${element.Image}" alt="" /> <img src="${element.Image2}" alt="" />
+  </div>
+</div>
+
+<div class="info-image">
+  <div class="name">
+    <p>${element.name}</p>
+  </div>
+
+  <div class="msp">
+    <p>${element.msp}</p>
+  </div>
+
+  <div class="cost">
+    Giá:
+    <p>${element.cost}</p>
+  </div>
+
+  <div class="size">
+    <p>Chọn size</p>
+
+    <select name="size" id="size">
+      <option value="">S</option>
+
+      <option value="">M</option>
+
+      <option value="">L</option>
+
+      <option value="">XL</option>
+    </select>
+  </div>
+
+  <div class="button">
+    <button class="l">Mua ngay</button> <button class="r">Thêm vào giỏ</button>
+  </div>
+</div>
+
+`; allProductHTML = allProductHTML + allProduct; }); const allProduct = `
+<div class="info-prd">
+  <div class="info-prodct">
+    <ul>
+      <li>đây là sản phẩm thuộc về hades</li>
+
+      <li>sản phẩm được làm bằng cotton 100%</li>
+
+      <li>siêu mát siêu thấm hút mồ hôi</li>
+    </ul>
+  </div>
+
+  <div class="image">
+    <img
+      src="https:product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg"
+      alt=""
+    />
+
+    <img
+      src="https:product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg"
+      alt=""
+    />
+  </div>
+</div>
+
+<div class="info-image">
+  <div class="name">
+    <p>p1</p>
+  </div>
+
+  <div class="msp">
+    <p>160.0000</p>
+  </div>
+
+  <div class="cost">
+    Giá:
+    <p>100000000</p>
+  </div>
+
+  <div class="size">
+    <p>Chọn size</p>
+
+    <select name="size" id="size">
+      <option value="">S</option>
+
+      <option value="">M</option>
+
+      <option value="">L</option>
+
+      <option value="">XL</option>
+    </select>
+  </div>
+
+  <div class="button">
+    <button class="l">Mua ngay</button> <button class="r">Thêm vào giỏ</button>
+  </div>
+</div>
+
+`; allProductHTML = allProductHTML + allProduct; const Productif = document.getElementById('see');
+Productif.innerHTML = allProductHTML; }; RenderAllProduct();

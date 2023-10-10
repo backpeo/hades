@@ -16,7 +16,6 @@ const productOnSale = [
       'https://product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg',
     name: 'p2',
     msp: 'MSP002',
-
     cost: 16000,
     id: 1,
   },
@@ -27,44 +26,12 @@ const productOnSale = [
       'https://product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg',
     name: 'p3',
     msp: 'MSP003',
-
     cost: 1200,
     id: 2,
   },
-  {
-    Image:
-      'https://product.hstatic.net/1000306633/product/dsc09844_99e6867866b04047b9d49fc637296d1b_grande.jpg',
-    Image2:
-      'https://product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg',
-    name: 'p4',
-    msp: 'MSP003',
-
-    cost: 1200,
-    id: 4,
-  },
-  {
-    Image:
-      'https://product.hstatic.net/1000306633/product/dsc09844_99e6867866b04047b9d49fc637296d1b_grande.jpg',
-    Image2:
-      'https://product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg',
-    name: 'p5',
-    msp: 'MSP003',
-
-    cost: 1200,
-    id: 5,
-  },
-  {
-    Image:
-      'https://product.hstatic.net/1000306633/product/dsc09844_99e6867866b04047b9d49fc637296d1b_grande.jpg',
-    Image2:
-      'https://product.hstatic.net/1000306633/product/hd_thang_8.1076_0bc59cee572f420e858e2d078bf10aed_grande.jpg',
-    name: 'p6',
-    msp: 'MSP003',
-
-    cost: 1200,
-    id: 6,
-  },
 ];
+
+const product_id = new URLSearchParams(document.location.href.split('?')[1]).get('id');
 
 const array = [];
 
@@ -83,54 +50,6 @@ var button_x = document.getElementById('icon');
 var shopping_cart = document.querySelector('.shopping-cart');
 var shop = document.querySelector('.shop');
 var cart = document.querySelector('.cart');
-
-window.addEventListener('scroll', function () {
-  var scrollPosition = window.scrollY;
-  if (scrollPosition > 66) {
-    element.classList.add('beta');
-  } else {
-    element.classList.remove('beta');
-  }
-});
-
-button.addEventListener('click', () => {
-  contain.classList.add('active');
-  main.classList.add('active2');
-  bgf.classList.add('active3');
-});
-
-button_x.addEventListener('click', () => {
-  contain.classList.remove('active');
-  main.classList.remove('active2');
-  bgf.classList.remove('active3');
-});
-
-bgf.addEventListener('click', () => {
-  contain.classList.remove('active');
-  main.classList.remove('active2');
-  bgf.classList.remove('active3');
-});
-
-shop.addEventListener('click', () => {
-  shopping_cart.classList.add('active');
-  main.classList.add('active2');
-  bgf.classList.add('active3');
-});
-
-bgf.addEventListener('click', () => {
-  shopping_cart.classList.remove('active');
-  main.classList.remove('active2');
-  bgf.classList.remove('active3');
-});
-
-const handleClick = function () {
-  contain.classList.remove('active');
-  shopping_cart.classList.remove('active');
-  main.classList.remove('active2');
-  bgf.classList.remove('active3');
-  array.push(productOnSale[1]);
-  Render();
-};
 
 const totalPrice = () => {
   const sum = array.reduce((preve, current) => preve + current.cost, 0);
@@ -184,50 +103,6 @@ const handleAdd = function (index) {
   totalPrice();
 };
 
-//all item
-const RenderAllItems = () => {
-  var allitemsHTML = '';
-
-  productOnSale.map((element, index) => {
-    const htmls = `
-    <div class="product">
-    <div class="product-cover">
-          <img
-            src="${element.Image}"
-            alt="img_product"
-            class="product-img-front"
-          />
-          <div class="product-fit">
-            <div class="fit-obj">
-              <a href="./product.html?id=${index}">
-                <img
-                  src="${element.Image2}"
-                  alt=" "
-                  class="product-img-back"
-              /></a>
-
-              <div class="button">
-                <button class="left">MUA NGAY</button>
-                <button class="right " onClick={handleAdd(${index})}>THÊM VÀO GIỎ</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="product-info">
-          <a class="name-product" href="">${element.name}</a>
-          <p class="cost-product">${element.cost}đ</p>
-        </div>
-        </div>
-    `;
-    allitemsHTML = allitemsHTML + htmls;
-  });
-
-  const allItem = document.getElementById('content');
-  allItem.innerHTML = allitemsHTML;
-};
-
-RenderAllItems();
-
 //tim kiem
 
 searchInput.addEventListener('keyup', function (e) {
@@ -268,3 +143,103 @@ const RenderAllLooking = (results) => {
   allLookingProduct.innerHTML = allLooking;
 };
 RenderAllLooking();
+
+const RenderAllProduct = () => {
+  const element = productOnSale[product_id];
+  console.log(element);
+
+  const allProduct = `
+    <div class="info-prd">
+      <div class="info-prodct">
+        <ul>
+          <li>đây là sản phẩm thuộc về hades</li>
+
+          <li>sản phẩm được làm bằng cotton 100%</li>
+
+          <li>siêu mát siêu thấm hút mồ hôi</li>
+        </ul>
+      </div>
+
+      <div class="image">
+        <img src="${element.Image}" alt="" /> <img src="${element.Image2}" alt="" />
+      </div>
+    </div>
+
+    <div class="info-image">
+      <div class="name">
+        <p>${element.name}</p>
+      </div>
+
+      <div class="msp">
+        <p>${element.msp}</p>
+      </div>
+
+      <div class="cost">
+        Giá:
+        <p>${element.cost}</p>
+      </div>
+
+      <div class="size">
+        <p>Chọn size</p>
+
+        <select name="size" id="size">
+          <option value="">S</option>
+
+          <option value="">M</option>
+
+          <option value="">L</option>
+
+          <option value="">XL</option>
+        </select>
+      </div>
+
+      <div class="button">
+        <button class="l">Mua ngay</button> <button class="r">Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    `;
+  const allInfoProduct = document.getElementById('see');
+  console.log(allInfoProduct);
+  allInfoProduct.innerHTML = allProduct;
+};
+RenderAllProduct();
+
+window.addEventListener('scroll', function () {
+  var scrollPosition = window.scrollY;
+  if (scrollPosition > 66) {
+    element.classList.add('beta');
+  } else {
+    element.classList.remove('beta');
+  }
+});
+
+button.addEventListener('click', () => {
+  contain.classList.add('active');
+  main.classList.add('active2');
+  bgf.classList.add('active3');
+});
+
+button_x.addEventListener('click', () => {
+  contain.classList.remove('active');
+  main.classList.remove('active2');
+  bgf.classList.remove('active3');
+});
+
+bgf.addEventListener('click', () => {
+  contain.classList.remove('active');
+  main.classList.remove('active2');
+  bgf.classList.remove('active3');
+});
+
+shop.addEventListener('click', () => {
+  shopping_cart.classList.add('active');
+  main.classList.add('active2');
+  bgf.classList.add('active3');
+});
+
+bgf.addEventListener('click', () => {
+  shopping_cart.classList.remove('active');
+  main.classList.remove('active2');
+  bgf.classList.remove('active3');
+});

@@ -4,17 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./sale.css" />
+    <link rel="stylesheet" href="./code/tools/fontawesome-free-6.4.2-web/css/all.min.css" />
+
     <title>Document</title>
   </head>
   <body>
-    <div class="info">
-      <h1>HADES STUDIO</h1>
-      <h2>THÔNG TIN GIAO HÀNG</h2>
-      <div class="box">
-        <input type="text" placeholder="Họ và tên" />
-        <input type="email" placeholder="email" />
-        <input type="text" placeholder="Số điện thoại" />
-        <input type="text" placeholder="Địa chỉ" />
+    <div class="all">
+      <div class="info">
+        <div class="head">
+          <a href="./index.html"><i class="fa-solid fa-arrow-left"></i>Về trang chủ</a>
+          <h1>HADES STUDIO</h1>
+          <h2>THÔNG TIN GIAO HÀNG</h2>
+        </div>
+        <div class="box">
+          <input type="text" placeholder="Họ và tên" />
+        </div>
+        <div class="box">
+          <input type="email" placeholder="email" />
+        </div>
+        <div class="box">
+          <input type="text" placeholder="Số điện thoại" />
+        </div>
+        <div class="box">
+          <input type="text" placeholder="Địa chỉ" />
+        </div>
+        <div class="box">
+          <input type="text" placeholder="Chý ý gửi cho người giao hàng" />
+        </div>
         <div class="chose">
           <select class="city">
             <option value="">Chọn tỉnh thành</option>
@@ -35,25 +51,28 @@
             <option value="">Hải Phòng</option>
           </select>
         </div>
-        <h2>Phương thức vận chuyển</h2>
-        <div class="van-chuyen">
-          <input type="checkbox" />giao hàng tận nơi
-          <div class="cost">40.000đ</div>
-        </div>
+
         <div class="thanh-toan">
           <h2>Phương thức thanh toán</h2>
           <div class="cach-thanh-toan">
-            <input type="checkbox" value="1" name="tra-tien" /><i
-              class="fa-solid fa-money-bill"
-            ></i>
-            <span>Thanh toán khi giao hàng</span>
-            <input type="checkbox" value="1" name="tra-tien" /><i
-              class="fa-regular fa-credit-card"
-            ></i>
-            <span>Chuyển khoản qua ngân hàng</span>
+            <div class="sale">
+              <input type="radio" value="1" name="tra-tien" />
+              <i class="fa-solid fa-money-bill"></i>
+              <span>Thanh toán khi giao hàng</span>
+            </div>
+            <div class="sale">
+              <input type="radio" value="1" name="tra-tien" />
+              <i class="fa-regular fa-credit-card"></i>
+              <span>Chuyển khoản qua ngân hàng</span>
+            </div>
           </div>
+        </div>
+
+        <div class="button">
+          <button class="done">Hoàn tất đơn hàng</button>
         </div>
       </div>
     </div>
+    <script src="./scrip.js"></script>
   </body>
 </html>

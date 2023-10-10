@@ -100,12 +100,14 @@ ul li {
   padding-right: 17px;
 }
 .h1 {
+  width: 100%;
   display: flex;
   position: relative;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .h2 {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;

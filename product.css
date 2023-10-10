@@ -16,6 +16,7 @@ ul li {
 }
 #main {
   height: auto;
+  width: 100%;
   position: relative;
   overflow: hidden;
   transition: 0.7s;
@@ -330,226 +331,81 @@ ul li {
   left: 0;
   transition: 0.7s;
 }
-.slider {
-  margin-top: 76px;
-  padding-left: 85%;
-}
-.content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+#see {
+  margin-top: 100px;
+  width: 100%;
   height: auto;
-  max-width: 80%;
-  margin: 0 auto;
-  gap: 20px;
-  margin-top: 20px;
-  /* transition: opacity 0.3 ease; */
-}
-#product {
-  margin-top: 40px;
-  height: 100%;
-}
-
-.content .product img {
-  width: 100%;
-  margin-top: 40px;
-}
-
-.product-cover {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.product:hover .product-img-front {
-  opacity: 0;
-  overflow: hidden;
-}
-
-.product-img-back {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition-duration: 200ms;
-}
-
-.button button {
-  height: 40px;
-  opacity: 0;
-  transition-duration: 200ms;
-  transform: translateY(40px);
-}
-
-.product-cover .button {
   display: flex;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  height: 67px;
 }
 
-.product:hover .product-img-back {
-  opacity: 1;
+.info-prd {
+  width: 70%;
+  display: flex;
 }
 
-.product:hover .button button {
-  transform: translateY(-33px);
-  opacity: 1;
+.image {
+  margin: 10px 15px 10px 200px;
+  width: 70%;
+  height: 600px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
-.product:hover > img {
-  opacity: 0;
+.info-prodct {
+  width: 40%;
+  margin-top: 300px;
+  padding-left: 70px;
 }
 
-.button .left,
-.right {
-  width: 50%;
-  background-color: #000;
-  color: #ccc;
-  cursor: pointer;
-  height: 40px;
-  border: none;
+.info-prodct ul li {
+  font-size: 20px;
 }
 
-.product-fit {
-  position: absolute;
-  inset: 0;
+.info-image {
+  width: 25%;
+  margin-top: 200px;
+  margin-left: 100px;
 }
-.fit-obj {
-  position: relative;
-  width: 100%;
-  height: 100%;
+
+.name {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
-.fit-obj img {
-  position: absolute;
-  inset: 0;
+
+.msp {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.cost {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-right: 150px;
+}
+#size {
+  margin-top: 15px;
+
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 .button {
-  width: 100%;
-  display: flex;
-  translate: 0 20px;
-  justify-content: space-between;
-  gap: 0 5px;
-}
-.fit-obj .button {
-  position: absolute;
-  bottom: 0;
-}
-.product-info a {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-}
-.product-info p {
-  width: 100%;
-  justify-content: center;
-  text-decoration: none;
-  color: #000;
-  text-align: center;
-}
-@keyframes runningAnimation {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-.running-text {
-  animation: runningAnimation 15s linear infinite;
-  margin: 0 250px;
-  display: flex;
-  white-space: nowrap;
-  padding: 30px 15px 0 0;
-}
-.slogan .running-text {
-  font-size: 75px;
-  font-style: italic;
-  color: #fff;
-  text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black;
-}
-.slogan {
-  width: 100%;
-  display: flex;
-  overflow: hidden;
-  padding: 20px;
-}
-
-.footer {
-  width: 100%;
+  width: 80%;
   height: auto;
-  display: flex;
-  margin: 50px;
 }
-
-.tieu_de {
-  font-size: 1rem;
-  width: 22%;
-  padding-left: 25px;
-  padding-right: 25px;
-  font-weight: bold;
-  display: block;
-}
-.rolln {
-  margin-top: 30px;
-}
-.tieu_de p {
-  width: 100%;
-  font-size: 0.99rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #000;
-  font-weight: normal;
-  margin-bottom: 2px;
-}
-
-.tieu_de a {
-  text-decoration: none;
-  color: #000;
-  margin-top: 50px;
-  margin-bottom: 2px;
-}
-
-.messenge-text {
-  color: aqua;
-  line-height: 1.25;
-  font-size: 15px;
-  margin-top: 40px;
-  display: flex;
+.l,
+.r {
+  width: 45%;
   height: 40px;
   background-color: #000;
-  overflow: hidden;
-  width: 100%;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-}
-.running-mess {
-  animation: runningAnimation 5s linear infinite;
-  margin: 0 250px;
-  display: flex;
-  white-space: nowrap;
-}
-.messenge-text span {
   color: #fff;
-  font-size: 10px;
 }
-.social {
-  display: flex;
-}
-.fb i {
-  display: inline-block;
-  font-size: 35px;
-  margin-right: 5px;
-}
-.tieu_de .tt img {
-  width: 190px;
-  margin: 0;
-}
-span {
-  padding-left: 5px;
-  padding-top: 5px;
+
+.l:hover,
+.r:hover {
+  background-color: #fff;
+  color: #000;
 }

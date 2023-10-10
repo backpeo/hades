@@ -109,7 +109,9 @@ ul li {
 
 input[type='text'],
 input[type='email'],
-input[type='password'] {
+input[type='password'],
+input[type='date'] {
+  padding-left: 15px;
   width: 550px;
   height: 50px;
   background-color: #ededed;
@@ -120,12 +122,7 @@ input[type='password'] {
   padding: 3px;
   font-size: 15px;
 }
-input[type='date'] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-}
+
 button {
   font-size: 15px;
   padding: 15px 30px;
