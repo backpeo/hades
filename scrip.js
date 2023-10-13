@@ -165,7 +165,7 @@ const Render = function () {
         <div > ${element.cost} đ
         </div>
         <div class="btn-xshop" onClick={handleDeleteCard(${index})}>
-        <i class="fa-solid fa-xmark"  ></i>
+        <i class="fa-solid fa-xmark"></i>
         </div>
         </div>
         </div>
@@ -214,7 +214,7 @@ const RenderAllItems = () => {
           </div>
         </div>
         <div class="product-info">
-          <a class="name-product" href="">${element.name}</a>
+          <a class="name-product" href="./sale.html">${element.name}</a>
           <p class="cost-product">${element.cost}đ</p>
         </div>
         </div>

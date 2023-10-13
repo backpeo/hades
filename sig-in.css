@@ -98,8 +98,16 @@ ul li {
   justify-content: center;
 }
 .all {
-  padding-top: 90px;
+  padding-top: 30px;
 }
+
+.word {
+  margin: 40px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .box {
   font-size: 30px;
 }
@@ -119,7 +127,7 @@ input[type='date'] {
   justify-content: center;
   display: flex;
   border: none;
-  padding: 3px;
+  padding: 5px;
   font-size: 15px;
 }
 
@@ -131,6 +139,7 @@ button {
   background-color: #000;
   color: #fff;
   margin-right: 15px;
+  cursor: pointer;
 }
 button:hover {
   background-color: #fff;

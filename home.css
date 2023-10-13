@@ -17,7 +17,6 @@ ul li {
 #main {
   height: auto;
   position: relative;
-  overflow: hidden;
   transition: 0.7s;
   right: 0;
 }
@@ -41,22 +40,31 @@ ul li {
 
 #nav {
   display: flex;
-  padding-top: 20px;
   padding-right: 17px;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav li {
+  padding-top: 20px;
+  height: 100%;
 }
 
 #nav li :hover {
   background-image: url(https://file.hstatic.net/1000306633/file/269858510_400978881784237_2773069039765727977_n_1dec697e894b44028881c14c6507f7d8.png);
-  background-size: 35px 10px;
+  background-size: 34px 38px;
   background-repeat: no-repeat;
   color: #000;
 }
+
 #nav li a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.685);
   font-size: 0.6875em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  height: 100%;
+  padding: 20px 10px;
+  margin-right: 12px;
+
   font-family: Arial, Helvetica, sans-serif;
 }
 #account_link {
@@ -150,6 +158,10 @@ ul li {
 .content {
 }
 
+.option {
+  margin-bottom: 25px;
+}
+
 .content .option {
   padding-top: 5px;
   display: flex;
@@ -201,16 +213,18 @@ ul li {
   width: 100%;
   height: auto;
   display: flex;
-  margin: 50px;
+  margin-top: 25px;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-bottom: 20px;
 }
 
 .tieu_de {
-  font-size: 1rem;
-  width: 22%;
-  padding-left: 25px;
-  padding-right: 25px;
+  font-size: 14px;
+  width: 100%;
   font-weight: bold;
   display: block;
+  padding-right: 70px;
 }
 .rolln {
   margin-top: 30px;
@@ -221,7 +235,7 @@ ul li {
   font-family: Arial, Helvetica, sans-serif;
   color: #000;
   font-weight: normal;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .tieu_de a {
